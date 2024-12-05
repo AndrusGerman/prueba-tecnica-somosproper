@@ -1,0 +1,22 @@
+{
+  "name": "prueba-tecnica",
+  "version": "1.0.0",
+  "description": "prueba tecnica somosproper",
+  "main": "index.ts",
+  "scripts": {
+    "start": "bun --env-file=.env src/index.ts",
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/AndrusGerman/prueba-tecnica-somosproper"
+  },
+  "author": "Andrus Diaz",
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "mysqljs/mysql"
+  },
+  "devDependencies": {
+    "@types/mysql": "^2.15.26",
+    "@types/node": "^22.10.1"
+  }
+}
