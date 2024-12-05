@@ -13,7 +13,10 @@ export class RecordDataMysqlRepository {
           (err, result, fields) => {
             if (err) return reject(err);
 
-            const resultParse = result.map(
+
+            
+
+            const resultParse = (result as any[]).map(
               (data) => new RecordData(data.id, data.nombre, data.idPadre)
             );
 

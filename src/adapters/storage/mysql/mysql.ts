@@ -1,5 +1,5 @@
 import { Config } from "../../../ports/config";
-import mysql from "mysql";
+import mysql from "mysql2";
 
 export class MysqlStorage {
   private _conn: mysql.Connection;

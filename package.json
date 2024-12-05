@@ -14,10 +14,9 @@
   "author": "Andrus Diaz",
   "license": "MIT",
   "dependencies": {
-    "mysql": "mysqljs/mysql"
+    "mysql2": "^3.11.5"
   },
   "devDependencies": {
-    "@types/mysql": "^2.15.26",
     "@types/node": "^22.10.1"
   }
 }
