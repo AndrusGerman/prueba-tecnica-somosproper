@@ -19,7 +19,7 @@ docker-compose up
 ```
 
 <div align="center">
-        <img src="./assets/docker-compose.png" width="20%">
+        <img src="./assets/docker-compose.png" width="60%">
 </div>
 
 _Nota, este proceso puede demorar un poco hasta que la base de datos este completamente en linea_
@@ -40,6 +40,10 @@ Para ejecutar:
 ```bash
 docker run prueba-tecnica-somosproper-memory
 ```
+
+<div align="center">
+        <img src="./assets/docker.png" width="60%">
+</div>
 
 ### MYSQL (Docker):
 
