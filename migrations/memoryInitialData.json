@@ -1,0 +1,59 @@
+{
+  "recordData": [
+    {
+      "id": 1,
+      "nombre": "Mascotas",
+      "idPadre": 0
+    },
+    {
+      "id": 2,
+      "nombre": "Gato",
+      "idPadre": 1
+    },
+    {
+      "id": 3,
+      "nombre": "Perro",
+      "idPadre": 1
+    },
+    {
+      "id": 4,
+      "nombre": "Plantas",
+      "idPadre": 0
+    },
+    {
+      "id": 5,
+      "nombre": "Árbol",
+      "idPadre": 4
+    },
+    {
+      "id": 6,
+      "nombre": "Flores",
+      "idPadre": 3
+    },
+    {
+      "id": 7,
+      "nombre": "Micu",
+      "idPadre": 2
+    },
+    {
+      "id": 8,
+      "nombre": "Sasy",
+      "idPadre": 2
+    },
+    {
+      "id": 9,
+      "nombre": "Fido",
+      "idPadre": 3
+    },
+    {
+      "id": 10,
+      "nombre": "Bobby",
+      "idPadre": 3
+    },
+    {
+      "id": 11,
+      "nombre": "Roble",
+      "idPadre": 5
+    }
+  ]
+}

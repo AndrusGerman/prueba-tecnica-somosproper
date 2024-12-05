@@ -2,7 +2,7 @@ import { RecordData } from "../../../../domain/recordData";
 import { MemoryStorage } from "../memory";
 
 export class RecordDataMemoryRepository {
-  private dbName = 'recordData';
+  private dbName = "recordData";
   constructor(private storage: MemoryStorage) {}
 
   async GetAll(): Promise<RecordData[]> {
@@ -10,14 +10,14 @@ export class RecordDataMemoryRepository {
   }
 
   async Save(recordData: RecordData): Promise<void> {
-    let index= 1;
+    let index = 1;
     const allElements = this.storage.Get(this.dbName) as RecordData[];
-    if (allElements.length>0) {
-      index = allElements[allElements.length-1].id??0+1;
+    if (allElements.length > 0) {
+      index = allElements[allElements.length - 1].id ?? 0 + 1;
     }
 
     recordData.id = index;
     allElements.push(recordData);
-    this.storage.Set(this.dbName,allElements)
+    this.storage.Set(this.dbName, allElements);
   }
 }

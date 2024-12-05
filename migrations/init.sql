@@ -20,7 +20,6 @@ CREATE TABLE RecordsData (
 );
 
 
-
 INSERT INTO somosproper.RecordsData (id,nombre,idPadre) VALUES
 	 (1,'Mascotas',0),
 	 (2,'Gato',1),

@@ -4,7 +4,8 @@
   "description": "prueba tecnica somosproper",
   "main": "index.ts",
   "scripts": {
-    "start": "bun --env-file=.env src/index.ts",
+    "start-memory-bun": "bun --env-file=.env src/index_memory.ts",
+    "start-mysql-bun": "bun --env-file=.env src/index_mysql.ts"
   },
   "repository": {
     "type": "git",
