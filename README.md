@@ -18,6 +18,10 @@ Levanta el servicio
 docker-compose up
 ```
 
+<div align="center">
+        <img src="./assets/docker-compose.png" width="20%">
+</div>
+
 _Nota, este proceso puede demorar un poco hasta que la base de datos este completamente en linea_
 
 ## Pasos en caso de contar con Docker:
