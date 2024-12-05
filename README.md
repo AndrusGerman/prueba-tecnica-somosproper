@@ -1,8 +1,10 @@
 # Prueba tecnica (somosproper)
 
-Este proyecto cuenta con una capa en Memoria y una en MYSQL Para mayor comodidad de la intérpretante.
+Este proyecto cuenta con una capa en Memoria y una en MYSQL para mayor comodidad de la intérpretante.
 
-## Pasos en caso de contar con docker-compose:
+_Nota, no se utilizó ningún framework ni herramienta externa para estructurar el proyecto_
+
+## Pasos para ejecutar en caso de contar con docker-compose:
 
 ### Mysql (Docker Compose)
 
@@ -24,7 +26,7 @@ docker-compose up
 
 _Nota, este proceso puede demorar un poco hasta que la base de datos este completamente en linea_
 
-## Pasos en caso de contar con Docker:
+## Pasos para ejecutar en caso de contar con Docker:
 
 ### Memoria (Docker):
 
