@@ -1,0 +1,28 @@
+name: somosproper-prueba-tecnica
+services:
+  mysql-db:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=33062777-4d80-49fb-9d44-1b9de7439404
+      - MYSQL_DATABASE=somosproper
+      - MYSQL_USER=somosproper
+      - MYSQL_PASSWORD=4f283344-e164-4654-8e7f-f4e6c922134d
+    expose:
+      - 3306
+    volumes:
+      - ./migrations/init.sql:/docker-entrypoint-initdb.d/1.sql
+    healthcheck:
+        test: mysqladmin ping -h 127.0.0.1 -u $$MYSQL_USER --password=$$MYSQL_PASSWORD
+        start_period: 5s
+        interval: 5s
+        timeout: 5s
+        retries: 5
+  client:
+    build:
+      dockerfile:  ./dockerfiles/Dockerfile.mysql
+      context: .
+    depends_on:
+     mysql-db:
+      condition: service_healthy
+    

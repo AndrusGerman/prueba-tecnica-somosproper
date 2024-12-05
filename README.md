@@ -2,9 +2,27 @@
 
 Este proyecto cuenta con una capa en Memoria y una en MYSQL Para mayor comodidad de la intérpretante.
 
-## Requerimientos en caso de contar con Docker:
+## Pasos en casod e contar con docker-compose:
 
-### En memoria (Docker):
+### Mysql (Docker Compose)
+
+Compila los servicios
+
+```bash
+docker-compose build
+```
+
+Levanta el servicio
+
+```bash
+docker-compose up
+```
+
+_Nota, este proceso puede demorar un poco hasta que la base de datos este completamente en linea_
+
+## Pasos en caso de contar con Docker:
+
+### Memoria (Docker):
 
 En caso de ejecutar la capa mas sencilla en memoria solo es necesario ejecutar los siguientes comandos:
 Para compilar:
@@ -19,7 +37,7 @@ Para ejecutar:
 docker run prueba-tecnica-somosproper-memory
 ```
 
-## En mysql (Docker):
+### MYSQL (Docker):
 
 En caso de ejecutar la capa con mysql necesitamos preparar la base de datos.
 
@@ -46,3 +64,5 @@ Y para finalizar ejecutar el cliente.
 ```bash
 docker run  --network=somosproper-net prueba-tecnica-somosproper-mysql
 ```
+
+_Nota, si se ejecuta este comando antes de que termine de iniciar la base de datos puede generar problemas_
