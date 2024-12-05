@@ -15,34 +15,41 @@ export class RecordDataService {
     return new Array(size).fill("*").join(" ");
   }
 
-  public printData(elements: RecordData[]) {
-    const elementsGroup = this.groupBy(elements, "idPadre");
+  private getMinId(group: { [key: string]: RecordData[] }): string {
+    return Object.keys(group).sort((a, b) => Number(a) - Number(b))[0];
+  }
 
-    const fathers = elementsGroup["0"] || [];
+  public printData(elements: RecordData[]) {
+    // declare values
+    const elementsGroup = this.groupBy(elements, "idPadre");
+    const fatherIdPadre = this.getMinId(elementsGroup);
+    const fathers = elementsGroup[fatherIdPadre] || [];
+
+    // declare map elements
     const mapElements = new Map<string, RecordData>();
     elements.map((data) => mapElements.set(String(data.id), data));
 
     for (let index = 0; index < fathers.length; index++) {
       const father = mapElements.get(String(fathers[index].id)) as RecordData;
-      this.printDataContent(father, elementsGroup, 0);
+      this.recursivePrintDataContent(father, elementsGroup, 0);
     }
   }
 
-  private printDataContent(
+  private recursivePrintDataContent(
     recordData: RecordData,
-    elementsGroup: any,
+    elementsGroup: { [key: string]: RecordData[] },
     depth: number
   ) {
+    // declare values
     const space = this.spaceText(depth);
     const sonDepth = depth + 1;
-    
-    // print content element
-    console.log(`${space + recordData.nombre}`);
     const sons = elementsGroup[String(recordData.id)] || [];
 
+    // print content element
+    console.log(`${space + recordData.nombre}`);
+
     for (let i = 0; i < sons.length; i++) {
-      const son = sons[i];
-      this.printDataContent(son, elementsGroup, sonDepth);
+      this.recursivePrintDataContent(sons[i], elementsGroup, sonDepth);
     }
   }
 
